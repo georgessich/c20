@@ -1,0 +1,63 @@
+.questions {
+    background-color: $color-back; 
+
+    &__wrap {
+        display: flex;
+    }
+
+    &__left {
+        margin-right: 32rem;
+        padding: 4.8rem 0 0 4.8rem;
+        &-title {
+            @include titleProp;
+            margin-bottom: 2.4rem;
+        }
+
+        &-text {
+            @include regText;
+            margin-bottom: 4.4rem;
+        }
+    }
+
+    &__accordeon {
+        padding-top: 4rem;
+        
+
+        &-question {
+            font-size: 2.2rem;
+            position: relative;
+            // border-bottom: 1px solid rgba(0, 0, 0, .2);
+            padding: 2.4rem 0 2.4rem 0;
+            cursor: pointer;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 150%;
+                height: 1px;
+                left: 0;
+                top:100%;
+                background-color: rgba(0, 0, 0, .2);
+            }
+            span {
+                position: absolute;
+                left:140%;
+            }
+        }
+
+        &-answer {
+            z-index: 100;
+            @include regText;
+            padding-top: 2.4rem;
+            display: none;
+            width: 35rem;
+        }
+    }
+}
+
+.visible {
+    display: block;
+}
+
+.rotate {
+    transform: rotate(45deg);
+}

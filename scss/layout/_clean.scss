@@ -1,0 +1,38 @@
+.clean {
+
+    &__wrap {
+        display: grid;
+    grid-template-columns: repeat(2, max-content);
+    }
+    
+    &__img {
+
+        &-left{
+            grid-column: 1/2;
+            grid-row: 1/4;
+            width: 100%;
+        }
+
+        &-right {
+            grid-column: 2/2;
+            grid-row: 3/4;
+        }
+    }
+
+    &__right {
+        grid-column: 2/2;
+        grid-row: 1/2;
+        padding: 4.8rem 0 0 4.8rem;
+        &-title {
+            
+            margin-bottom: 2.4rem;
+            @include titleProp;
+        }
+
+        &-text {
+            @include regText;
+            width: 61.5rem;
+            margin-bottom: 2.1rem;
+        }
+    }
+}

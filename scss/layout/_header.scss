@@ -1,0 +1,90 @@
+.header {
+    background-image: url(../../img/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 100vh;
+
+    &__menu {
+        display: flex;
+        padding-top: 2.4rem;
+        &-wrap {
+            background-color: #fafafa;
+            width: 90%;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            height: 7.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-logo {
+            padding: 1rem 0 1rem 4rem;
+        }
+
+        &-list {
+            display: flex;
+            gap: 8rem;
+            margin-right: 4rem;
+            
+        }
+        &-item {
+            position: relative;
+            &:not(:last-child):after {
+                content: "";
+                position: absolute;
+                margin-left: 4rem;
+                height: 18px;
+                width: 1px;
+                background-color: #e2e2e2;
+            }
+        }
+
+        &-link {
+            font-size: 1.6rem;
+            position: relative;
+            
+            &:after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                background-color: #000;
+                width: 0%;
+                left: 0;
+                top: 100%;
+                transition: all 1s;
+            }
+            &:hover:after {
+                width: 100%;
+            }
+        }
+        &-basket {
+            margin-left: 2.4rem;
+            background-color: #fafafa;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            height: 7.2rem; 
+            padding: 2.6rem;
+            cursor: pointer;
+        }
+    }
+
+    &__hero {
+        padding-top: 17.3rem;
+        &-title {
+            font-size: 7.2rem;
+            font-weight: 700;
+            line-height: 7.2rem;
+            width: 66rem;
+            margin-bottom: 4rem;
+        }
+
+        &-text {
+            font-size: 2.3rem;
+            font-weight: 400;
+            line-height: 2.8rem;
+            width: 68.8rem;
+            margin-bottom: 4.7rem;
+        }
+    }
+}

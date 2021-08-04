@@ -1,0 +1,17 @@
+.btn {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: $color-button;
+    border-radius: 8px;
+    padding: 4px 60px 4px 60px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    transition: all .5s;
+
+    &:hover {
+        transform:translateY(-2px);
+    }
+    &:active {
+        transform: translateY(2px);
+    }
+}
