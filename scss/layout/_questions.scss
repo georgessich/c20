@@ -21,8 +21,8 @@
 
     &__accordeon {
         padding-top: 4rem;
-        
-
+        position: relative;
+        margin-bottom: 3rem;
         &-question {
             font-size: 2.2rem;
             position: relative;
@@ -38,9 +38,13 @@
                 top:100%;
                 background-color: rgba(0, 0, 0, .2);
             }
-            span {
+            &--span{
                 position: absolute;
-                left:140%;
+                font-size: 2.2rem;
+                margin-top: -50px;
+                left: 145%;
+                transition: all .3s;
+
             }
         }
 
@@ -50,14 +54,30 @@
             padding-top: 2.4rem;
             display: none;
             width: 35rem;
+            transition: all .6s;
         }
     }
 }
 
 .visible {
     display: block;
+    animation: showContent .6s;
 }
 
 .rotate {
     transform: rotate(45deg);
+    transition: all .3s;
 }
+
+@keyframes showContent {
+    from {
+      opacity: 0;
+
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  

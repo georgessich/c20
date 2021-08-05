@@ -1,5 +1,4 @@
 const questionBtn = document.querySelectorAll('.questions__accordeon-question');
-const questionCross = document.querySelectorAll('.questions__accordeon-question span');
 const answer = document.querySelectorAll('.questions__accordeon-answer');
 
 
@@ -8,19 +7,13 @@ questionBtn.forEach(function(accordeon) {
 });
 
 function toggleAccordeon(e) {
-    answer.forEach(function(content){
-        if(content.previousElementSibling === e.target){
-            content.classList.toggle('visible');
-            toggleCross();
-            
+    for (const ans of answer) {
+        if (ans.previousElementSibling.previousElementSibling === e.target) {
+            ans.classList.toggle('visible');
+            ans.previousElementSibling.classList.toggle('rotate');
         } else {
-            content.classList.remove('active');
-             }
-    })
-}
-
-function toggleCross() {
-    questionCross.forEach(function(cross) {
-        cross.classList.toggle('rotate');
-    })
+            ans.classList.remove('visible');
+            ans.previousElementSibling.classList.remove('rotate');
+        }
+    }
 }

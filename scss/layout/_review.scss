@@ -1,0 +1,29 @@
+.review {
+
+    &__wrap {
+        padding-top: 13.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        &-name {
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+
+        &-text {
+            font-size: 4rem;
+            line-height: 4.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        &-img {
+            margin-bottom: 11.2rem;
+        }
+    }
+}

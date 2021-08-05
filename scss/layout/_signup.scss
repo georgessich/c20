@@ -1,0 +1,58 @@
+.signup {
+    background-color: $color-back;
+    &__wrap {
+        display: flex;
+
+        &-form {
+           padding: 4.8rem;
+            &--title {
+                @include titleProp;
+                margin-bottom: 1.2rem;
+            }
+
+            &--text {
+                @include regText;
+                margin-bottom: 1.2rem;
+                width: 59.3rem;
+            }
+
+            &--input {
+                width: 62.4rem;
+                height: 5.6rem;
+                font-size: 1.6rem;
+                padding: 1.5rem;
+                position: relative;
+                outline: none;
+                border: 1px solid transparent;
+                border-radius: 8px;
+                margin-bottom: 1rem;
+                &:focus {
+                    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+                    outline: none;
+                    border:1px solid #000;
+                }
+            }
+
+            &--btn {
+                position: absolute;
+                font-size: 2.6rem;
+                background-color: transparent;
+                padding: 1rem;
+                cursor: pointer;
+                left:43%;
+                transition: all .5s;
+
+                &:hover {
+                    transform: translateX(4px);
+                }
+            }
+            span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.input__wrap {
+    display: flex;
+}
